@@ -4,6 +4,7 @@ public class Practice {
 
    public static void main(String[] args) {
       Matriz();
+      System.out.println("hello world");
    }
 
    static void FizzBuzz() {
