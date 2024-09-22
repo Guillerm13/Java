@@ -4,7 +4,6 @@ public class Practice {
 
    public static void main(String[] args) {
       Matriz();
-      System.out.println("hello world");
    }
 
    static void FizzBuzz() {
@@ -269,6 +268,8 @@ public class Practice {
 
       int i;
       int j;
+
+      /*Ejercicios 1.Diagonal 2.Toda la matriz 3. Primera columna y ultima */
       for(i = 0; i < column; ++i) {
          for(j = 0; j < row; ++j) {
             if (column == row) {
