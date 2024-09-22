@@ -269,7 +269,7 @@ public class Practice {
       int i;
       int j;
 
-      /*Ejercicios 1.Diagonal 2.Toda la matriz 3. Primera columna y ultima */
+      /*Ejercicios 1.Diagonal 2.Toda la matriz 3. Primera columna y ultima 
       for(i = 0; i < column; ++i) {
          for(j = 0; j < row; ++j) {
             if (column == row) {
@@ -286,10 +286,175 @@ public class Practice {
       for(i = 0; i < column; ++i) {
          for(j = 0; j < row; ++j) {
             System.out.print(matriz[i][j] + " ");
+
          }
 
          System.out.println();
       }
+         */
+
+        ////////////////////////////////////////////////////
+
+         /*Ejercicios 4.Primera y ultima fila 5.Primera y ultima columna 
+
+         for(i = 0; i < column; ++i) {
+            for(j = 0; j < row; ++j) {
+               if (column == row) {
+                  if (i == j) {
+                     matriz[i][0] = (int)(Math.random() * 11.0);
+                     matriz[j][row-1] = (int)(Math.random() * 11.0);
+                  
+                  }
+               } else if (column != row) {
+                  matriz[0][j] = (int)(Math.random() * 11.0);
+                  matriz[row][j] = (int)(Math.random() * 11.0);
+               }
+            }
+         }
+   
+         for(i = 0; i < column; ++i) {
+            for(j = 0; j < row; ++j) {
+               System.out.print(matriz[i][j] + " ");
+            }
+   
+            System.out.println();
+         }
+
+         */
+
+         ///////////////////////////////////////////////////
+
+         /*Ejercicios 6.Primera columna y ultima fila 7. Imprimir matriz completa y sumar 
+
+         for(i = 0; i < column; ++i) {
+            for(j = 0; j < row; ++j) {
+               if (column == row) {
+                  if (i == j) {
+                     matriz[i][0] = (int)(Math.random() * 11.0);
+                     matriz[row-1][i] = (int)(Math.random() * 11.0);
+                  
+                  }
+               } else if (column != row) {
+                  matriz[i][j] = (int)(Math.random() * 11.0);
+                  
+                  int sum = sumOfNumbers(matriz);
+                  System.out.println("Sum of all matrix elements is: " + sum);
+            
+               }
+            }
+         }
+   
+         for(i = 0; i < column; ++i) {
+            for(j = 0; j < row; ++j) {
+               System.out.print(matriz[i][j] + " ");
+            }
+   
+            System.out.println();
+         }
+            */
+
+            ////////////////////////////////////////////////
+
+         /*Suma de diagonal
+
+         for(i = 0; i < column; ++i) {
+            for(j = 0; j < row; ++j) {
+               if (column == row) {
+                  matriz[i][j] = (int)(Math.random() * 11.0);
+               }
+                  
+            }
+            
+         }
+
+         
+         System.out.println();
+         for(i = 0; i < column; ++i) {
+            for(j = 0; j < row; ++j) {
+               System.out.print(matriz[i][j] + " ");
+            }
+   
+            System.out.println();
+            
+         }
+         int sum = sumOfNumbersdiagonal(matriz);
+         System.out.println("Sum of diagonal numbers is: " + sum);
+      }
+         */
+         
+   
+            ////////////////////////////////////////////////
+
+         /*Matriz al cuadrado y matriz original 
+         for(i = 0; i < column; ++i) {
+            for(j = 0; j < row; ++j) {
+               if (column == row) {
+                  matriz[i][j] = (int)(Math.random() * 11.0);
+               }
+                  
+            }
+            
+         }
+
+         System.out.println();
+         for(i = 0; i < column; ++i) {
+            for(j = 0; j < row; ++j) {
+               System.out.print(matriz[i][j] + " ");
+            }
+   
+            System.out.println();
+            
+         }
+
+         
+
+         System.out.println();
+         for(i = 0; i < column; ++i) {
+            for(j = 0; j < row; ++j) {
+               System.out.print((int)(Math.pow(matriz[i][j], 2))+ " ");
+            }
+   
+            System.out.println();
+            
+         }
+
+         
+      */
+
+
+
+   }
+
+   public static int sumOfNumbers(int[][] matriz){
+
+      int sum = 0;
+      for(int i = 0; i<matriz.length;i++){
+
+         for(int j = 0; j<matriz.length+1;j++){
+            sum += matriz[i][j];
+            
+         }
+
+      }
+      return sum;
+
+   }
+
+   public static int sumOfNumbersdiagonal(int[][] matriz){
+
+      int sum1 = 0;
+      for(int i = 0; i<matriz.length;i++){
+
+         for(int j = 0; j<matriz.length;j++){
+
+            if(i==j){
+               sum1 += matriz[i][j];
+            }
+            
+         }
+
+      }
+      return sum1;
 
    }
 
