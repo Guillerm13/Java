@@ -351,7 +351,7 @@ public class Practice {
          for(int j = 0; j < row; j++){
             if(column == row || column != row){
                if(i==j){
-               matriz[i][j] = (int)(Math.random()*11);
+               matriz[i][j] = (int)(Math.random()*10);
                }
             }
          }
