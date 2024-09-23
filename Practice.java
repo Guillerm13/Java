@@ -272,69 +272,55 @@ public class Practice {
 
       switch(Operator){
          case 1:
-         row = row();
-         column = column();
-         Diagonal(row, column);
-
-         break;
-
+            row = row();
+            column = column();
+            Diagonal(row, column);
+            break;
          case 2:
-         row = row();
-         column = column();
-         TodaLaMatriz(row, column);
-         break;
-
+            row = row();
+            column = column();
+            TodaLaMatriz(row, column);
+            break;
          case 3:
-         row = row();
-         column = column();
-         PrimeraColumnaYUltima(row, column);
-         break;
-
-
+            row = row();
+            column = column();
+            PrimeraColumnaYUltima(row, column);
+            break;
          case 4:
-         row = row();
-         column = column();
-         PrimeraFilaYUltima(row, column);
-         break;
-
+            row = row();
+            column = column();
+            PrimeraFilaYUltima(row, column);
+            break;
          case 5:
-         row= row();
-         column = column();
-         PrimeraFilaYUltimaColumna(row, column);
-         break;
-
+            row= row();
+            column = column();
+            PrimeraFilaYUltimaColumna(row, column);
+            break;
          case 6:
-         row = row();
-         column = column();
-         PrimeraColumnaYUltimaFila(row, column);
-         break;
-
+            row = row();
+            column = column();
+            PrimeraColumnaYUltimaFila(row, column);
+            break;
          case 7:
-         row = row();
-         column = column();
-         MatrizYSumatoria(row, column);
-         break;
-
+            row = row();
+            column = column();
+            MatrizYSumatoria(row, column);
+            break;
          case 8:
-         row = row();
-         column = column();
-         MatrizYSumatoriaDiagonal(row, column);
-         break;
-
+            row = row();
+            column = column();
+            MatrizYSumatoriaDiagonal(row, column);
+            break;
          case 9:
-         row = row();
-         column = column();
-         MatrizCuadrado(row, column);
-         break;
-
+            row = row();
+            column = column();
+            MatrizCuadrado(row, column);
+            break;
          default:
-         System.out.println();
-         System.out.println("Incorrect operator. Try again");
-         Matriz();
-         break;
-
-
-
+            System.out.println();
+            System.out.println("Incorrect operator. Try again");
+            Matriz();
+            break;
       }   
 
    
@@ -347,7 +333,7 @@ public class Practice {
          for(int j = 0; j < row; j++){
             if(column == row || column != row){
                if(i==j){
-               matriz[i][j] = (int)(Math.random()*11);
+               matriz[i][j] = (int)(Math.random()*10);
                }
             }
          }
