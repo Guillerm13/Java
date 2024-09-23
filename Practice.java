@@ -270,7 +270,7 @@ public class Practice {
       do{ 
          System.out.println();
          System.out.println("What operator do you want to use?");
-         System.out.println("1.Diagonal\n2.Toda la matriz\n3.Primera columna y ultima\n4.Primera y ultima fila\n5.Primera fila y ultima columna\n6.Primera columna y ultima fila\n7.Matriz completa y sumatoria\n8.Matriz completa y suma de diagonal\n9.Matriz al cuadrado");
+         System.out.println("1.Diagonal\n2.Toda la matriz\n3.Primera columna y ultima\n4.Primera y ultima fila\n5.Primera fila y ultima columna\n6.Primera columna y ultima fila\n7.Matriz completa y sumatoria\n8.Matriz completa y suma de diagonal\n9.Matriz al cuadrado\n10.Salir");
          Operator = myObj.nextInt();
          switch(Operator){
 
@@ -329,10 +329,13 @@ public class Practice {
             column = column();
             MatrizCuadrado(row, column);
             break;
+
+
+
    
             default:
             System.out.println();
-            System.out.println("Incorrect operator. Try again");
+            System.out.println("You exited the program");
             break;
    
    
@@ -340,7 +343,7 @@ public class Practice {
          }   
    
       
-      } while(Operator >= 1 || Operator <= 9);
+      } while(Operator >= 1 && Operator <= 9);
    }
       
 
@@ -349,7 +352,7 @@ public class Practice {
 
       for(int i = 0; i<column;i++){
          for(int j = 0; j < row; j++){
-            if(column == row || column != row){
+            if(column == row){
                if(i==j){
                matriz[i][j] = (int)(Math.random()*10);
                }
