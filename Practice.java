@@ -263,82 +263,86 @@ public class Practice {
 
    static void Matriz() {
       Scanner myObj = new Scanner(System.in);
-      System.out.println("What operator do you want to use?");
-      System.out.println("1.Diagonal\n2.Toda la matriz\n3.Primera columna y ultima\n4.Primera y ultima fila\n5.Primera fila y ultima columna\n6.Primera columna y ultima fila\n7.Matriz completa y sumatoria\n8.Matriz completa y suma de diagonal\n9.Matriz al cuadrado");
-      int Operator = myObj.nextInt();
       int row;
       int column;
+      int Operator;
       
-
-      switch(Operator){
-         case 1:
-         row = row();
-         column = column();
-         Diagonal(row, column);
-
-         break;
-
-         case 2:
-         row = row();
-         column = column();
-         TodaLaMatriz(row, column);
-         break;
-
-         case 3:
-         row = row();
-         column = column();
-         PrimeraColumnaYUltima(row, column);
-         break;
-
-
-         case 4:
-         row = row();
-         column = column();
-         PrimeraFilaYUltima(row, column);
-         break;
-
-         case 5:
-         row= row();
-         column = column();
-         PrimeraFilaYUltimaColumna(row, column);
-         break;
-
-         case 6:
-         row = row();
-         column = column();
-         PrimeraColumnaYUltimaFila(row, column);
-         break;
-
-         case 7:
-         row = row();
-         column = column();
-         MatrizYSumatoria(row, column);
-         break;
-
-         case 8:
-         row = row();
-         column = column();
-         MatrizYSumatoriaDiagonal(row, column);
-         break;
-
-         case 9:
-         row = row();
-         column = column();
-         MatrizCuadrado(row, column);
-         break;
-
-         default:
+      do{ 
          System.out.println();
-         System.out.println("Incorrect operator. Try again");
-         Matriz();
-         break;
+         System.out.println("What operator do you want to use?");
+         System.out.println("1.Diagonal\n2.Toda la matriz\n3.Primera columna y ultima\n4.Primera y ultima fila\n5.Primera fila y ultima columna\n6.Primera columna y ultima fila\n7.Matriz completa y sumatoria\n8.Matriz completa y suma de diagonal\n9.Matriz al cuadrado");
+         Operator = myObj.nextInt();
+         switch(Operator){
 
-
-
-      }   
-
+            case 1:
+            row = row();
+            column = column();
+            Diagonal(row, column);
    
+            break;
+   
+            case 2:
+            row = row();
+            column = column();
+            TodaLaMatriz(row, column);
+            break;
+   
+            case 3:
+            row = row();
+            column = column();
+            PrimeraColumnaYUltima(row, column);
+            break;
+   
+   
+            case 4:
+            row = row();
+            column = column();
+            PrimeraFilaYUltima(row, column);
+            break;
+   
+            case 5:
+            row= row();
+            column = column();
+            PrimeraFilaYUltimaColumna(row, column);
+            break;
+   
+            case 6:
+            row = row();
+            column = column();
+            PrimeraColumnaYUltimaFila(row, column);
+            break;
+   
+            case 7:
+            row = row();
+            column = column();
+            MatrizYSumatoria(row, column);
+            break;
+   
+            case 8:
+            row = row();
+            column = column();
+            MatrizYSumatoriaDiagonal(row, column);
+            break;
+   
+            case 9:
+            row = row();
+            column = column();
+            MatrizCuadrado(row, column);
+            break;
+   
+            default:
+            System.out.println();
+            System.out.println("Incorrect operator. Try again");
+            break;
+   
+   
+   
+         }   
+   
+      
+      } while(Operator >= 1 || Operator <= 9);
    }
+      
 
    public static void Diagonal(int row, int column){
       int[][] matriz = new int[column][row];
